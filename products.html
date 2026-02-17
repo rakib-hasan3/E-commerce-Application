@@ -26,9 +26,10 @@
     <link rel="stylesheet" href="style/style.css">
 </head>
 
-<body>
 
-    <!-- nav section -->
+<body class="bg-gray-50">
+
+    <!-- Navbar copy paste -->
     <div class="navbar bg-base-100 shadow-sm">
 
         <div class="navbar-start">
@@ -72,101 +73,19 @@
             </div>
         </div>
     </div>
-    <!-- hero secion -->
-    <div class="hero  min-h-[600px] w-full mx-auto" style="background-image: url(/Assets/banner-image.png);">
-        <div class="hero-overlay bg-gradient-to-r from-blue-950/50 "></div>
-        <div class="hero-content text-neutral-content ">
-            <div class="max-w-screen-lg">
-                <h1 class="mb-5 text-6xl font-bold">Best Collection For You</h1>
-                <p class="mb-5 text-xl w-175">
-                    Discover the latest trends in fashion, electronics, and more. Shop with confidence and style at
-                    SwiftCart
-                </p>
-                <button class="btn btn-primary btn-lg rounded-lg">Shop Now</button>
-            </div>
-        </div>
-    </div>
+    <!-- products -->
 
-    <!-- why choose me  -->
-    <section class="py-16 bg-base-100">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-extrabold text-neutral mb-4">Why Choose Us</h2>
-                <p class="text-gray-500 max-w-2xl mx-auto">
-                    We provide the best shopping experience with top-notch services.
-                </p>
-            </div>
+    <section class="py-16">
+        <div class="max-w-6xl mx-auto px-4">
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <h2 class="text-3xl font-bold  mb-6"> All Products</h2>
 
-                <div
-                    class="relative bg-white p-8  rounded-xl shadow-sm border border-gray-100 flex flex-col items-start pt-12">
-                    <div class="absolute -top-6 left-8 bg-blue-50 p-4 rounded-xl shadow-md border border-white">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-600" fill="none"
-                            viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M8.25 18.75a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 0 1-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h1.125c.621 0 1.129-.504 1.129-1.125V11.25c0-4.446-3.542-7.875-7.875-7.875H9.75M9.604 20.451a4.53 4.53 0 0 1-.635-.451m11.4 0c.232-.148.441-.3.631-.451m-1.54-6.141a4.857 4.857 0 0 1 1.503 3.51M10.821 3.375c4.139 0 7.5 3.361 7.5 7.5" />
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3 mt-8 text-neutral">Fast Delivery</h3>
-                    <p class="text-gray-500 leading-relaxed">Get your orders delivered to your doorstep quickly and
-                        efficiently.</p>
-                </div>
+            <!-- Categories -->
+            <div id="categories" class="flex items-center gap-3 flex-wrap mb-8"></div>
 
-                <div
-                    class="relative bg-white p-8 rounded-xl shadow-sm border border-gray-100 flex flex-col items-start pt-12">
-                    <div class="absolute -top-6 left-8 bg-blue-50 p-4 rounded-xl shadow-md border border-white">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-600" fill="none"
-                            viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3 mt-8 text-neutral">24/7 Support</h3>
-                    <p class="text-gray-500 leading-relaxed">Our support team is available around the clock to assist
-                        you.</p>
-                </div>
+            <!-- Products -->
+            <div id="products" class="grid grid-cols-1 md:grid-cols-4 gap-6"></div>
 
-                <div
-                    class="relative bg-white p-8 rounded-xl shadow-sm border border-gray-100 flex flex-col items-start pt-12">
-                    <div class="absolute -top-6 left-8 bg-blue-50 p-4 rounded-xl shadow-md border border-white">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-600" fill="none"
-                            viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.040L3 14.535a12.02 12.02 0 0014.138 6.556" />
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3 mt-8 text-neutral">Secure Payment</h3>
-                    <p class="text-gray-500 leading-relaxed">Experience safe and secure transactions with our encrypted
-                        systems.</p>
-                </div>
-
-                <div
-                    class="relative bg-white p-8 rounded-xl shadow-sm border border-gray-100 flex flex-col items-start pt-12">
-                    <div class="absolute -top-6 left-8 bg-blue-50 p-4 rounded-xl shadow-md border border-white">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-600" fill="none"
-                            viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3 mt-8 text-neutral">Easy Returns</h3>
-                    <p class="text-gray-500 leading-relaxed">Not satisfied? Return your products easily within 30 days.
-                    </p>
-                </div>
-
-            </div>
-        </div>
-    </section>
-    <!-- trending now  -->
-    <section class="py-16 md:ml-6  lg:ml-52 lg:mr-52 bg-white">
-        <div class=" ">
-            <h2 class="text-3xl  font-bold mb-10">
-                Trending Now
-            </h2>
-            <div id="trending-products" class="grid p- grid-cols-1 md:grid-cols-3 gap-6">
-
-            </div>
         </div>
     </section>
     <!-- footer -->
@@ -235,10 +154,7 @@
             </div>
         </nav>
     </footer>
-
-
-    <script src="/app.js"></script>
+    <script src="app.js"></script>
 </body>
-
 
 </html>
