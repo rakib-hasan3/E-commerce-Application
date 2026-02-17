@@ -62,10 +62,10 @@
                             d="M4 6h16M4 12h8m-8 6h16" />
                     </svg>
                 </div>
-                <ul tabindex="-1"
+                <ul tabindex="-4"
                     class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                    <li><a>Home</a></li>
-                    <li><a>Product</a></li>
+                    <li><a href="./">Home</a></li>
+                    <li><a href="./products.html">Product</a></li>
                     <li><a>About</a></li>
                     <li><a>Contact</a></li>
                 </ul>
@@ -76,13 +76,13 @@
     <div class="hero  min-h-[600px] w-full mx-auto" style="background-image: url(/Assets/banner-image.png);">
         <div class="hero-overlay bg-gradient-to-r from-blue-950/50 "></div>
         <div class="hero-content text-neutral-content ">
-            <div class="max-w-screen-lg">
+            <div class=" max-w-screen-lg">
                 <h1 class="mb-5 text-6xl font-bold">Best Collection For You</h1>
-                <p class="mb-5 text-xl w-175">
+                <p class="mb-5 text-xl lg:w-175">
                     Discover the latest trends in fashion, electronics, and more. Shop with confidence and style at
                     SwiftCart
                 </p>
-                <button class="btn btn-primary btn-lg rounded-lg">Shop Now</button>
+                <button class="btn btn-primary btn-lg rounded-lg"><a href="./products.html">Shop Now</a> </button>
             </div>
         </div>
     </div>
@@ -160,11 +160,11 @@
     </section>
     <!-- trending now  -->
     <section class="py-16 md:ml-6  lg:ml-52 lg:mr-52 bg-white">
-        <div class=" ">
+        <div class=" sm:p-4">
             <h2 class="text-3xl  font-bold mb-10">
                 Trending Now
             </h2>
-            <div id="trending-products" class="grid p- grid-cols-1 md:grid-cols-3 gap-6">
+            <div id="trending-products" class="grid sm:p-6 grid-cols-1 md:grid-cols-3 gap-6">
 
             </div>
         </div>
@@ -172,18 +172,17 @@
     <!-- footer -->
     <footer class="footer sm:footer-horizontal bg-base-200 text-base-content p-10">
         <nav>
-            <h6 class="footer-title">Services</h6>
-            <a class="link link-hover">Branding</a>
-            <a class="link link-hover">Design</a>
-            <a class="link link-hover">Marketing</a>
-            <a class="link link-hover">Advertisement</a>
+            <h6 class="footer-title">SwiftCart</h6>
+            <p class="lg:w-80">Your one stop shop for all your fashion and lifestyle needs .Quality products,fast
+                delivery, and
+                excellent support.</p>
         </nav>
         <nav>
-            <h6 class="footer-title">Company</h6>
-            <a class="link link-hover">About us</a>
+            <h6 class="footer-title">Quick Links</h6>
+            <a src="./" class="link link-hover">Home</a>
+            <a src="./products.html" class="link link-hover">Products</a>
+            <a class="link link-hover">About</a>
             <a class="link link-hover">Contact</a>
-            <a class="link link-hover">Jobs</a>
-            <a class="link link-hover">Press kit</a>
         </nav>
         <nav>
             <h6 class="footer-title">Legal</h6>
@@ -201,7 +200,7 @@
                 </path>
             </svg>
             <p>
-                ACME Industries Ltd.
+                SwiftCart Industries Ltd.
                 <br />
                 Providing reliable tech since 1992
             </p>
