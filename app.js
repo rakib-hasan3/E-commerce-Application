@@ -168,7 +168,7 @@ loadAllProducts();
 // catagori wis
 async function loadCategories() {
   try {
-    const res = await fetch(`${BASE_URL}/products/category`);
+    const res = await fetch(`${BASE_URL}/products/categories`);
     const categories = await res.json();
     renderCategories(categories);
   } catch (error) {
@@ -177,7 +177,7 @@ async function loadCategories() {
 }
 
 function renderCategories(categories) {
-  const container = document.getElementById("category");
+  const container = document.getElementById("categories");
   container.innerHTML = "";
 
   // "All" Button
