@@ -29,7 +29,7 @@ function renderTrending(products) {
     const card = document.createElement("div");
 
     card.className =
-      " rounded-2xl shadow-md hover:shadow-xl transition p-4";
+      " rounded-2xl lg:m-0 m-8 shadow-md hover:shadow-xl transition p-4";
 
     card.innerHTML = `
           <img src="${product.image}" 
@@ -53,6 +53,7 @@ function renderTrending(products) {
 
           <div class="flex gap-2">
             <button 
+              
               onclick="showDetails(${product.id})"
               class="flex-1 bg-gray-100 hover:bg-gray-200 py-2 rounded-lg">
               Details
@@ -233,14 +234,22 @@ function renderProducts(products) {
 
   products.forEach(product => {
     const card = document.createElement("div");
-    card.className = "bg-white rounded-2xl shadow-md hover:shadow-xl transition p-4 h-full";
+    card.className = "bg-white rounded-2xl shadow-md hover:shadow-xl transition p-4 h-full flex flex-col";
 
     card.innerHTML = `
-      <img src="${product.image}" class="h-40 mx-auto object-contain mb-4">
+      <img src="${product.image}" class="h-40 mx-auto object-contain mb-4 shrink-0">
+      
       <h3 class="font-semibold text-lg mb-2">${truncate(product.title)}</h3>
       <p class="text-gray-600 text-sm mb-1">${capitalize(product.category)}</p>
       <p class="font-bold text-indigo-600 mb-2">$${product.price}</p>
       <p class="text-yellow-500 text-sm mb-3">⭐ ${product.rating.rate}</p>
+      
+      <div class="flex-grow"></div>
+
+      <div class="flex gap-2 mt-auto pt-2">
+        <button onclick="showDetails(${product.id})" class="btn btn-primary flex-1">Details</button>
+        <button class="btn btn-secondary flex-1">Add</button>
+      </div>
     `;
 
     container.appendChild(card);
@@ -253,3 +262,34 @@ function truncate(text, limit = 35) {
 }
 loadCategories();
 loadAllProducts();
+
+
+// show details 
+async function showDetails(id) {
+  try {
+    const res = await fetch(`https://fakestoreapi.com/products/${id}`);
+    const product = await res.json();
+
+    openModal(product);
+
+  } catch (error) {
+    console.error("Details Error:", error);
+  }
+}
+
+function openModal(product) {
+  document.getElementById("product-modal").classList.remove("hidden");
+  document.getElementById("product-modal").classList.add("flex");
+
+  document.getElementById("modal-image").src = product.image;
+  document.getElementById("modal-title").innerText = product.title;
+  document.getElementById("modal-description").innerText = product.description;
+  document.getElementById("modal-price").innerText = "$" + product.price;
+  document.getElementById("modal-rating").innerText = "⭐ " + product.rating.rate;
+}
+
+function closeModal() {
+  document.getElementById("product-modal").classList.add("hidden");
+  document.getElementById("product-modal").classList.remove("flex");
+}
+
